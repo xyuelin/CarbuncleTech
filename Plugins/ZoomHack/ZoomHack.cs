@@ -23,8 +23,13 @@
 
         private readonly Color LogColor = Color.FromRgb(51, 204, 255);
 
-        private const string ZoomHackOffsetUrl =
+		#if RB_CN
+		private const string ZoomHackOffsetUrl =
+            @"https://raw.githubusercontent.com/LimiQS/Erozea-Zoom/master/Offsets.xml";
+		#else
+         private const string ZoomHackOffsetUrl =
             @"https://github.com/jayotterbein/FFXIV-Zoom-Hack/raw/master/Offsets.xml";
+		#endif
 
         #region Overrides
         public override void OnInitialize()
